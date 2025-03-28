@@ -1,0 +1,1213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-900 text-white;
+  }
+
+  input, textarea {
+    @apply border-gray-600 text-inherit;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add these new styles */
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 4rem 4rem;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+/* Update the gradient animation */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Improve dark mode transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add these new animations */
+@keyframes comet {
+  0% {
+    transform: translateY(-100%) translateX(-100%) rotate(-45deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(100vw) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+.comet-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Enhanced gradient animations */
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Enhanced grid pattern */
+.bg-grid-pattern {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px, 20px 20px, 20px 20px;
+  background-position: center;
+}
+
+/* Enhance hover effects */
+.hover-glow {
+  @apply transition-all duration-300;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Smooth animations */
+.animate-pulse {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Enhanced transitions */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add these new styles for enhanced comet animation */
+.comet {
+  position: absolute;
+  pointer-events: none;
+}
+
+.comet-head {
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.5);
+}
+
+.comet-tail {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to left, transparent, white);
+  transform: translateY(-50%) rotate(-45deg);
+  transform-origin: right center;
+}
+
+/* Enhanced glow effects */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Enhance background patterns */
+.bg-grid-pattern {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+    linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px, 30px 30px, 30px 30px;
+  background-position: center;
+  mask-image: linear-gradient(to bottom, transparent, black, transparent);
+}
+
+/* Enhanced gradient animations */
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Add shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Enhanced hover transitions */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+}
+
+/* Add these new styles */
+.skill-card {
+  @apply p-6 rounded-xl bg-white/5 backdrop-blur-lg relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(59, 130, 246, 0.3),
+    rgba(147, 51, 234, 0.3),
+    rgba(236, 72, 153, 0.3),
+    transparent
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+  padding: 3px;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(59, 130, 246, 0.8),
+    rgba(147, 51, 234, 0.8),
+    rgba(236, 72, 153, 0.8),
+    transparent
+  );
+  animation: borderRotate 4s linear infinite;
+}
+
+@keyframes borderRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced navbar styles */
+nav {
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #3B82F6, #8B5CF6);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Loading animation */
+@keyframes gradient-text {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+  background-size: 200% auto;
+  animation: gradient-text 3s linear infinite;
+}
+
+/* Enhanced card hover effects */
+.hover-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3);
+}
+
+/* Social media icons hover effect */
+.social-icon {
+  @apply transition-all duration-300;
+}
+
+.social-icon:hover {
+  @apply text-blue-500 transform scale-110;
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+}
+
+/* Add these new styles for enhanced animations and Apple-like design */
+.glass-morphism {
+  @apply backdrop-blur-lg bg-white/10 border border-white/20;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
+  background-size: 200% auto;
+  animation: text-gradient 4s linear infinite;
+}
+
+@keyframes text-gradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Apple-style button hover effect */
+.apple-button {
+  @apply relative overflow-hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.apple-button::before {
+  content: '';
+  @apply absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300;
+}
+
+.apple-button:hover::before {
+  @apply opacity-100;
+}
+
+/* Enhanced input fields */
+.input-focus-ring {
+  @apply ring-offset-2 ring-blue-500/50 transition-all duration-300;
+}
+
+.input-focus-ring:focus {
+  @apply ring-2;
+}
+
+/* Smooth section transitions */
+section {
+  @apply transition-all;
+  transition-duration: 800ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Enhanced card hover effects */
+.hover-card-apple {
+  @apply transition-all duration-500;
+  transform: perspective(1000px) rotateX(0) rotateY(0);
+}
+
+.hover-card-apple:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+  box-shadow: 
+    0 20px 40px -20px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add these new styles for enhanced contact section */
+.contact-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(147, 51, 234, 0.1) 50%,
+    rgba(236, 72, 153, 0.1) 100%
+  );
+}
+
+.contact-card {
+  backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px -20px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced social media icons */
+.social-icon-gradient {
+  background: linear-gradient(135deg, var(--from-color), var(--to-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.social-icon-gradient:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+/* Apple-style form inputs */
+.apple-input {
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.apple-input:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Add these new scroll-based animations */
+@keyframes sectionZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.section-animate {
+  animation: sectionZoomIn 0.8s cubic-bezier(0.6, -0.05, 0.01, 0.99) forwards;
+  opacity: 0;
+}
+
+/* Enhanced section transitions */
+section {
+  @apply transition-all duration-500;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* Smooth scroll with padding for fixed header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Enhanced section visibility transitions */
+.section-visible {
+  animation: sectionZoomIn 0.8s cubic-bezier(0.6, -0.05, 0.01, 0.99) forwards;
+}
+
+/* Section background gradients */
+.section-gradient {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(var(--tw-color-primary-500), 0.05),
+    transparent
+  );
+}
+
+/* Update the scroll animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Add scroll-triggered animation classes */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+
+.scroll-animate.animate-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate.animate-down {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced section transitions */
+section {
+  @apply transition-all duration-500;
+  transform-origin: center;
+  will-change: transform, opacity;
+  transition-timing-function: cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Section reveal animation */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.6s cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+
+.section-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Add these new animations and styles */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+.floating-element {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* Enhanced glass morphism */
+.glass-card {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-card:hover {
+  @apply bg-white/10;
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.2),
+    0 10px 10px -5px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: radial-gradient(
+    circle at top right,
+    rgba(59, 130, 246, 0.1),
+    rgba(147, 51, 234, 0.1),
+    rgba(236, 72, 153, 0.1)
+  );
+}
+
+/* Smooth transitions */
+.smooth-transition {
+  @apply transition-all duration-500;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 20px 40px -20px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Particle animation */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-100px) rotate(180deg);
+  }
+}
+
+.particle {
+  position: absolute;
+  pointer-events: none;
+  animation: particle-float 10s infinite;
+}
+
+/* Enhanced section transitions */
+section {
+  @apply transition-all duration-700;
+  transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Add these enhanced animations */
+.wave-float {
+  animation: wave-float 4s ease-in-out infinite;
+}
+
+@keyframes wave-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(15px) rotate(-2deg);
+  }
+}
+
+/* Enhanced navigation styles */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #3B82F6, #8B5CF6);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Enhanced card animations */
+.floating-card {
+  animation: card-float 6s ease-in-out infinite;
+  animation-delay: calc(var(--delay, 0) * 1s);
+}
+
+@keyframes card-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Super smooth section transitions */
+.section-transition {
+  transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.section-transition:hover {
+  transform: translateY(-5px);
+}
+
+/* Enhanced glass card effect */
+.glass-card {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 15px 20px rgba(59, 130, 246, 0.1);
+}
+
+/* Add these new styles for enhanced card designs */
+.fancy-border-gradient {
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.5),
+    rgba(147, 51, 234, 0.5),
+    rgba(236, 72, 153, 0.5)
+  );
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.fancy-border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.fancy-border-gradient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.2),
+    rgba(147, 51, 234, 0.2),
+    rgba(236, 72, 153, 0.2)
+  );
+  animation: borderRotate 4s linear infinite;
+}
+
+@keyframes borderRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced glass card effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 15px 20px rgba(59, 130, 246, 0.1);
+}
+
+/* Certificate card styles */
+.cert-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #3B82F6, #8B5CF6, #EC4899);
+  z-index: -1;
+  animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Update the transition styles */
+.transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 8px 24px -12px rgba(59, 130, 246, 0.15);
+}
+
+/* Optimize section transitions */
+section {
+  isolation: isolate;
+  will-change: transform, opacity;
+}
+
+/* Smooth intersection observer transitions */
+.intersection-observer-target {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Prevent layout shifts */
+.content-wrapper {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Remove existing card styles and add these new ones */
+.skill-card-wrapper {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.skill-card-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.5),
+    rgba(147, 51, 234, 0.5),
+    rgba(236, 72, 153, 0.5),
+    rgba(59, 130, 246, 0.5)
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card-wrapper:hover::before {
+  opacity: 1;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* Enhanced floating animation */
+.floating-card {
+  animation: cardFloat 6s ease-in-out infinite;
+  animation-delay: calc(var(--delay, 0) * 1s);
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add random delays to floating cards */
+.floating-card:nth-child(3n) {
+  --delay: 0.1;
+}
+.floating-card:nth-child(3n + 1) {
+  --delay: 0.2;
+}
+.floating-card:nth-child(3n + 2) {
+  --delay: 0.3;
+}
+
+/* Enhanced card styles with floating effect */
+.skill-card-container {
+  position: relative;
+  perspective: 1000px;
+}
+
+.skill-card {
+  @apply p-6 rounded-xl bg-white/5 backdrop-blur-lg border border-white/10;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  @apply border-blue-500/30;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating icon animation */
+.animate-float-icon {
+  animation: floatIcon 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Enhanced backdrop blur */
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Remove any conflicting styles */
+.glass-card,
+.skill-card-wrapper,
+.fancy-border-gradient,
+.rotating-border {
+  display: none;
+}
+
+/* Clean up section styles */
+section {
+  @apply relative z-10 overflow-visible py-32 px-6;
+}
+
+.container {
+  @apply relative z-10 max-w-7xl mx-auto;
+}
+
+/* Add smooth transitions for certificate slider */
+.certification-slider {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Enhanced navigation buttons */
+.nav-button {
+  @apply absolute top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-lg transition-all;
+  z-index: 10;
+}
+
+.nav-button:hover {
+  @apply bg-white/30;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Pagination dots animation */
+.pagination-dot {
+  transition: all 0.3s ease;
+}
+
+.pagination-dot.active {
+  width: 2rem;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+}
+
+/* Achievement and Certification Cards */
+.certification-card-container,
+.achievement-card-container {
+  flex: 0 0 calc(33.333% - 2rem);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+.certification-card-container.center-card,
+.achievement-card-container.center-card {
+  transform: scale(1.05);
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Remove blur effect */
+.certification-card-container,
+.achievement-card-container,
+.certification-card-container.center-card,
+.achievement-card-container.center-card {
+  filter: none;
+}
+
+.certification-card,
+.achievement-card {
+  @apply bg-white/5 backdrop-blur-lg rounded-xl overflow-hidden p-6;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  height: 100%;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.center-card .certification-card,
+.center-card .achievement-card {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.8),
+    rgba(147, 51, 234, 0.8),
+    rgba(236, 72, 153, 0.8)
+  ) 1;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(59, 130, 246, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth Slider Transitions */
+.slider-container {
+  @apply overflow-visible relative;
+  perspective: 1500px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 2rem;
+  transform-style: preserve-3d;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  @apply absolute top-1/2 -translate-y-1/2 p-4 rounded-full 
+    bg-white/10 hover:bg-white/20 backdrop-blur-lg 
+    transition-all duration-300 ease-out z-20;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.nav-button:hover {
+  @apply bg-white/30;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+/* Pagination Dots */
+.pagination-dot {
+  @apply w-2 h-2 rounded-full bg-white/20 transition-all duration-300;
+}
+
+.pagination-dot.active {
+  @apply w-8;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+}
+
+/* Border Gradient */
+.border-gradient-to-r {
+  border-image: linear-gradient(to right, #3B82F6, #8B5CF6, #EC4899) 1;
+  animation: borderRotate 4s linear infinite;
+}
+
+@keyframes borderRotate {
+  from {
+    border-image: linear-gradient(0deg, #3B82F6, #8B5CF6, #EC4899) 1;
+  }
+  to {
+    border-image: linear-gradient(360deg, #3B82F6, #8B5CF6, #EC4899) 1;
+  }
+}
+
+/* Enhanced card hover effects */
+.certification-card:hover,
+.achievement-card:hover {
+  transform: translateY(-5px) rotateX(5deg);
+}
+
+/* Enhanced border animation */
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(59, 130, 246, 0.8);
+  }
+  50% {
+    border-color: rgba(236, 72, 153, 0.8);
+  }
+}
+
+.center-card .certification-card,
+.center-card .achievement-card {
+  animation: borderGlow 3s ease-in-out infinite;
+}
